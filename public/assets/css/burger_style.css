@@ -1,0 +1,42 @@
+/*font-family: 'Lato', sans-serif;
+font-family: 'Oleo Script', cursive;*/
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+#textinput
+{
+    margin-top: 20px;
+    height:100px;
+    width: 350px;
+    font-size:14pt;
+}
+
+
+#burger-title {
+  font-family: 'Oleo Script', cursive
+}
+
+#img-pad {
+  top: 20px;
+  padding: 10px;
+  margin-top: 30px;
+
+}
+
+#image {
+  height:100px;
+}
+
+#font-pad {
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.footer {
+  margin-top: 20%;
+}

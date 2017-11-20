@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+    </div>
+    <div class="col-lg-4">
+      <div class="text-center" id="img-pad">
+        <img src="assets/img/burger.png" id="image" alt="delish burger">
+      </div>
+      <div>
+        <h1 class="text-center" id="burger-title">Gimme Some Burger Luv!</h1>
+      </div>
+    </div>
+    <div class="col-lg-4">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <!-- Load burgers -->+
+      <div>
+        {{#each burgers}}
+            {{#unless this.devoured}}
+        <pre>{{this.id}}. {{this.burger_name}}</pre>
+        <form method="POST" action="/burgers/update?_method=PUT"
+        class="button-size">
+          <input type="hidden" name="id"
+          value="{{this.id}}">
+          <button type = "submit" class="btn btn-primary btn-sm">
+            DEVOUR ME!</button>
+         </form>
+         {{/unless}}
+       {{/each}}
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div id="burger-eaten">
+          {{#each burgers}}
+            {{#if this.devoured}}
+              <input class="form-control" type="text" placeholder="{{this.id}}. {{this.burger_name}}" readonly>
+            {{/if}}
+          {{/each}}
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-lg-12 text-center enter_section">
+        <form action="/burgers/create" method="POST">
+                <input type="text" name="burger_name" class="form-control"
+                value="" id="enter_text">
+                <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-fire"></span> Gimme Burger Luv!</button>
+            <div class="caption center-block" id="font-pad"><i>Enter the name of your favorite burger!</i>
+           </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-lg-4">
+    </div>
+  </div>
+</div>
+<footer class="footer text-center">
+  <p>&copy; Jenna Ezis King</p>
+</footer>
