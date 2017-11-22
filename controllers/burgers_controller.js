@@ -1,37 +1,50 @@
+// *********************************************************************************
+// api-routes.js - this file offers a set of routes for displaying and saving data to the db
+// *********************************************************************************
+
+// Dependencies
+// =============================================================
 var express = require("express");
 var router = express.Router();
+// Requiring our Burger model
+var db = require("../models");
 
-//Pull in the data from the database by way of ORM
-var burgerluv = require("../models/burger.js");
 
-router.get('/', function(req, res){
-  burgerluv.all(function(data) {
+router.get("/", function(req, res) {
+  db.Burger.findAll({})
+  .then(function(dbBurger) {
+    // res.json(dbBurger);
     var hbsObject = {
-      burgers: data
+      burgers: dbBurger
     };
     console.log(hbsObject);
-    res.render("index", hbsObject);
+   res.render("index", hbsObject);
   });
 });
 
-router.put('/burgers/update', function(req,res) {
-  burgerluv.update(req.body.id, function(result){
-    console.log(result);
-    res.redirect("/");
-});
-});
-
-
+  //creates a new burger to be devoured
 router.post("/burgers/create", function(req, res) {
-    burgerluv.add(req.body.burger_name, function(result){
-      res.redirect("/");
-    });
+  var newBurger = req.body.burger_name;
+
+  db.Burger.create({
+    burger_name: newBurger,
+    devoured: 0
   });
 
+  res.redirect('/');
+});
 
+//updates the burger to devoured
+router.put('/burgers/update', function(req,res) {
+  db.Burger.update({
+    devoured: 1,
+  },{
+    where: {
+      id: [req.body.id]
+    }
+  });
 
+  res.redirect('/');
+});
 
-
-
-// Export routes for server.js to use.
 module.exports = router;
