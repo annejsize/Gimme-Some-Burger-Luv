@@ -1,7 +1,11 @@
 # Gimme Some Burger Luv!
-A Node, Express, Handlebars, and MySQL burger app that allows user to select a burger and then 'devour' it. 
+A Node, Express, Handlebars, and MySQL burger app that allows user to select a burger and then 'devour' it. Hungry yet?
 
-###Technologies used
+### Screen Shot
+![screen shot 2017-12-19 at 10 24 11 pm](https://user-images.githubusercontent.com/24446599/34191336-c96c5068-e50b-11e7-8cc7-be0fa7b60b17.png)
+
+
+### Technologies used
 Node.js
 Handlebars - http://handlebarsjs.com/
 Sequelize - http://docs.sequelizejs.com/en/v3/
@@ -12,13 +16,13 @@ method-override NPM Package - https://www.npmjs.com/package/method-override
 express-handlebars NPM Package - https://www.npmjs.com/package/express-handlebars
 mysql NPM Package - https://www.npmjs.com/package/mysql
 
-###Prerequisites
+### Prerequisites
 - Node.js - Download the latest version of Node https://nodejs.org/en/
-- Materialize - Add CDN link http://materializecss.com/getting-started.html
 
-###Built With
-Sublime Text - Text Editor
+
+### Built With
+Atom - Text Editor
 Node
 Sequelize
-Materialize - Wireframe
+
 
