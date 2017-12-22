@@ -7,7 +7,7 @@ A Node, Express, Handlebars, and MySQL burger app that allows user to select a b
 ### Overview
 Craving a burger? Then check out this app where you can enter the name of the burger you'd like to order. It then pops up on the left-side panel, waiting to be devoured. Click on the 'DEVOUR ME!' button and then the burger entry switches over to the right side of the screen.
 
-This app is one of my first attempts at creating a full stack app using Handlebars, Sequelize, Node, and various NPM packages to make this app possible.
+This app is one of my first attempts at creating a full stack app using MySQL, Node, Express, Handlebars,a homemade ORM  and various NPM packages to make this app possible.
 
 ### Tools Used
 Node.js | Sequelize | MySQL | Express
